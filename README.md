@@ -19,6 +19,20 @@ OpenAI Account (https://platform.openai.com/apps).
   pip install -r requirements.txt
 </pre>
 
+## Install Database
+<pre>
+  wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_agent_ai_chatgpt/main/vpbx_agentai.sql
+  mysql -u root < vpbx_agentai.sqlackup.sql
+</pre>
+
+Create User
+<pre>
+  mysql -u root
+  GRANT ALL PRIVILEGES ON vpbx_agentai.* TO myuser@'localhost' IDENTIFIED BY 'mypassword';
+  FLUSH PRIVILEGES;
+  exit;
+</pre>
+
 ## Install from script
 Download the script
 <pre>
