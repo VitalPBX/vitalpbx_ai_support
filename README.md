@@ -49,6 +49,19 @@ Run the script
   ./install.sh
 </pre>
 
+## Edit .env and database.php
+Now we are going to edit the .env file to add the Openai API Key and the paths to the documents and the ChomaDB database.
+<pre>
+  cd /usr/share/vpbx_ai_support/
+  nano .env
+</pre>
+
+Later we are going to edit the database.php file to configure the access credentials to the amriadb database
+<pre>
+  cd /var/www/vpbx_ai_support/html/
+  nano dtabase.php
+</pre>
+
 ## Embedding Document
 To transfer our documents to the ChromaDB database we must do the following:<br>
 1.- Upload the document to the /usr/share/vpbx_ai_support/docs folder with the information to use for the query with ChatGPT-Embedded<br>
