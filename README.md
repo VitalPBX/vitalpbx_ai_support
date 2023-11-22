@@ -69,4 +69,4 @@ And it would have to return the following to us:
 tcp        0      0 192.168.57.50:3002       0.0.0.0:*               LISTEN     
 tcp        0      0 127.0.1.1:3002           0.0.0.0:*               LISTEN  
 </pre>
-Don 192.168.57.50 is our public or private IP.
+192.168.57.50 is our public or private IP.
