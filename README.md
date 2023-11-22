@@ -12,7 +12,7 @@ OpenAI Account (https://platform.openai.com/apps).
 </pre>
 
 <pre>
-  wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_agent_ai_chatgpt/main/requirements.txt
+  wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_ai_support/main/requirements.txt
 </pre>
 
 <pre>
