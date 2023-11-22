@@ -3,8 +3,8 @@
 // Define the database connection parameters.
 $host = "localhost";         // The hostname of the database server.
 $dbname = "vpbx_agentai";    // The name of the database.
-$username = "agentai";       // The username for the database connection.
-$password = "agentai2023";   // The password for the database connection.
+$username = "";              // The username for the database connection.
+$password = "";              // The password for the database connection.
 
 // Create a new instance of the mysqli class to establish a database connection.
 $mysqli = new mysqli(
