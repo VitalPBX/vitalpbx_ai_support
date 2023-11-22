@@ -50,7 +50,7 @@ Run the script
 </pre>
 
 ## Edit .env and database.php
-Now we are going to edit the .env file to add the Openai API Key and the paths to the documents and the ChomaDB database.
+Now we are going to edit the .env file to add the Openai API Key and the paths to the documents and the ChromaDB database.
 <pre>
   cd /usr/share/vpbx_ai_support/
   nano .env
