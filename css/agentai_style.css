@@ -1,0 +1,109 @@
+/* General body styling */
+body {
+    background-color: white; /* Sets a white background color */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Removes default margin */
+    font-family: 'Roboto', sans-serif; /* Uses the modern 'Roboto' font with sans-serif as fallback */
+}
+
+/* Styling for chat container */
+.chat-container {
+    display: flex; /* Enables flexbox layout */
+    flex-direction: column; /* Stacks children vertically */
+    height: 100vh; /* Full height of the viewport */
+}
+
+/* Styling for chat header */
+.chat-header {
+    background-color: #3E493F; /* Characteristic blue background color */
+    color: white; /* White text for contrast */
+    font-size: 18px; /* Font size for readability */
+    padding: 10px; /* Padding for spacing */
+    border-bottom: 1px solid #B2AFAF; /* Bottom border for visual separation */
+    text-align: center; /* Centers text horizontally */
+}
+
+/* Styling for chat footer */
+.chat-footer {
+    font-size: 12px; /* Smaller font size for footer text */
+    padding: 10px; /* Padding for spacing */
+    border-bottom: 1px solid #B2AFAF; /* Bottom border for visual separation */
+    text-align: center; /* Centers text horizontally */
+}
+
+/* Styling for the chat box where messages are displayed */
+.chat-box {
+    flex: 1; /* Takes up remaining space in flex container */
+    overflow-y: auto; /* Enables vertical scrolling for overflow content */
+    padding: 20px; /* Padding for spacing */
+}
+
+/* Styling for user messages */
+.user-message {
+    background-color: #f0f0f0; /* Light background for message bubbles */
+    float: left; /* Aligns message to the left */
+    clear: both; /* Prevents floating elements from affecting layout */
+    margin: 5px 0px; /* Vertical margin for spacing between messages */
+    border-radius: 10px; /* Rounded corners for message bubbles */
+    max-width: 70%; /* Maximum width of message bubbles */
+    overflow-wrap: break-word; /* Wraps long words to the next line */
+    padding: 8px; /* Padding inside message bubbles */
+    font-size: 18px; /* Font size for readability */
+}
+
+/* Styling for bot messages (similar to user messages) */
+.bot-message {
+    background-color: #f0f0f0; /* Fondo claro para los mensajes */
+    float: left;
+    clear: both;
+    margin: 5px 0px;
+    border-radius: 10px;
+    max-width: 70%;
+    overflow-wrap: break-word;
+    padding: 8px;
+    font-size: 18px;
+}
+
+/* Utility class to clear floats */
+.clearfix::after {
+    content: ""; /* Required content for pseudo-elements */
+    clear: both; /* Clears the float */
+    display: table; /* Changes the display to table for clearing floats */
+}
+
+/* Default style for message input on large screens */
+#messageInput {
+    border-radius: 15px; /* Rounded corners for input field */
+    height: 50px; /* Fixed height of input field */
+    width: 50%; /* Adjust this value as needed */
+    display: block; /* Ensures input behaves as a block element */
+    margin-left: auto; /* Automatic left margin for centering */
+    margin-right: auto; /* Automatic right margin for centering */
+}
+
+/* Style adjustments for medium screens (tablets) */
+@media (max-width: 768px) {
+    #messageInput {
+        width: 70%; /* Wider on smaller screens */
+    }
+}
+
+/* Style adjustments for small screens (mobile phones) */
+@media (max-width: 480px) {
+    #messageInput {
+        width: 90%; /* Even wider on very small screens */
+    }
+}
+
+/* Styling for displaying code snippets */
+code {
+    display: block; /* Code appears in a separate block */
+    background-color: black; /* Black background for code block */
+    color: white; /* White text for contrast */
+    padding: 10px; /* Internal spacing for readability */
+    margin: 10px 0; /* Space above and below the code block */
+    overflow-x: auto; /* Adds horizontal scrolling for long lines of code */
+    white-space: pre-wrap; /* Preserves whitespace and line breaks */
+    word-wrap: break-word; /* Allows long words to break and wrap */
+    border-radius: 10px; /* Rounded corners for the code block */
+}

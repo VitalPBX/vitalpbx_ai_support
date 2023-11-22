@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Set the document title that appears on the browser tab -->
+    <title>VitalPBX - Agent AI - Signup</title>
+
+    <!-- Specify the character encoding for the HTML document -->
+    <meta charset="UTF-8">
+
+    <!-- Include external JavaScript files for form validation, using 'defer' to ensure they are run after the page is parsed -->
+    <script src="./js/just-validate.production.min.js" defer></script>
+    <script src="./js/validation.js" defer></script>
+
+    <!-- Link a CSS file to style the page -->
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    
+    <div class="chat-header">
+        <div class="header-left">
+            <a href="index.php">Home</a> <!-- Enlace a la página principal -->
+        </div>
+        <div class="header-title">VitalPBX Agent AI</div>
+        <div class="header-right"></div>
+    </div>
+    
+    <!-- Main title of the page, usually the largest and most prominent heading. -->
+    <h1>Signup</h1>
+    
+    <!-- Definition of a form with the 'action' attribute specifying where to send the form data once submitted. 
+         The 'post' method is used for securely and privately sending data. 
+         'novalidate' disables HTML5 form validation, presumably because JavaScript is used for validation. -->
+    <form action="process-signup.php" method="post" id="signup" novalidate>
+        <!-- Each 'div' represents a group of input in the form, with a label and an input field. -->
+
+        <!-- Input field for the user's name. 
+             The 'placeholder' attribute provides hint text inside the field. -->
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+        </div>
+        
+        <!-- Input field for the user's email. -->
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+        </div>
+        
+        <!-- Input field for the user's password. 
+             The 'password' type hides the text entered for security reasons. -->
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Create a password">
+        </div>
+        
+        <!-- Input field for confirming the password. -->
+        <div>
+            <label for="password_confirmation">Repeat password</label>
+            <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Repeat your password">
+        </div>
+        
+        <!-- Button to submit the form. -->
+        <button>Sign up</button>
+    </form>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+

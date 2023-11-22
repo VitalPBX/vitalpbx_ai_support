@@ -1,0 +1,201 @@
+/* General body styling */
+body {
+    background-color: white; /* Sets a white background color */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Removes default margin */
+    font-family: 'Roboto', sans-serif; /* Uses the modern 'Roboto' font with sans-serif as fallback */
+}
+
+.body-2 {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style for main heading (h1) elements */
+h1 {
+    color: #333;                    /* Sets the text color of headings to dark grey */
+    text-align: center;             /* Centers text horizontally */
+}
+
+/* Style for form elements */
+form {
+    max-width: 400px;               /* Maximum width of the form */
+    margin: 0 auto;                 /* Centers the form in the page */
+    padding: 20px;                  /* Padding inside the form */
+    border: 1px solid #ddd;         /* Border around the form with light grey color */
+    border-radius: 15px;            /* Rounded corners for the form border */
+    font-size: 18px;                /* Font size for text inside the form */
+}
+
+/* Styles for text, email, and password input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 90%;                     /* Width of the input fields (90% of parent element) */
+    padding: 10px;                  /* Padding inside the input fields */
+    margin: 10px 0;                 /* Vertical margin around the input fields */
+    border: 1px solid #ddd;         /* Border with light grey color for the input fields */
+    border-radius: 10px;            /* Rounded corners for the input fields */
+    font-size: 24px;                /* Larger font size for better readability */
+}
+
+/* Style for button elements */
+button {
+    background-color: #007bff;      /* Background color for buttons */
+    color: white;                   /* Text color for buttons */
+    padding: 10px 20px;             /* Padding inside the buttons */
+    border: none;                   /* No border for buttons */
+    border-radius: 5px;             /* Rounded corners for buttons */
+    cursor: pointer;                /* Changes the mouse cursor to a pointer */
+    font-size: 16px;                /* Font size for text inside buttons */
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #0056b3;      /* Darker background color when hovering over buttons */
+}
+
+/* Styling for chat container */
+.chat-container {
+    display: flex; /* Enables flexbox layout */
+    flex-direction: column; /* Stacks children vertically */
+    height: 100vh; /* Full height of the viewport */
+}
+
+/* Styling for chat header */
+.chat-header {
+    background-color: #3E493F; /* Characteristic blue background color */
+    color: white; /* White text for contrast */
+    font-size: 18px; /* Font size for readability */
+    padding: 10px; /* Padding for spacing */
+    border-bottom: 1px solid #B2AFAF; /* Bottom border for visual separation */
+    text-align: center; /* Centers text horizontally */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left a, .header-right a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.header-title {
+    font-size: 18px;
+}
+
+/* Styling for chat footer */
+.chat-footer {
+    font-size: 12px; /* Smaller font size for footer text */
+    padding: 10px; /* Padding for spacing */
+    border-bottom: 1px solid #B2AFAF; /* Bottom border for visual separation */
+    text-align: center; /* Centers text horizontally */
+}
+
+/* Styling for the chat box where messages are displayed */
+.chat-box {
+    flex: 1; /* Takes up remaining space in flex container */
+    overflow-y: auto; /* Enables vertical scrolling for overflow content */
+    padding: 20px; /* Padding for spacing */
+}
+
+/* Styling for user messages */
+.user-message {
+    background-color: #f0f0f0; /* Light background for message bubbles */
+    float: left; /* Aligns message to the left */
+    clear: both; /* Prevents floating elements from affecting layout */
+    margin: 5px 0px; /* Vertical margin for spacing between messages */
+    border-radius: 10px; /* Rounded corners for message bubbles */
+    max-width: 70%; /* Maximum width of message bubbles */
+    overflow-wrap: break-word; /* Wraps long words to the next line */
+    padding: 8px; /* Padding inside message bubbles */
+    font-size: 18px; /* Font size for readability */
+}
+
+/* Styling for bot messages (similar to user messages) */
+.bot-message {
+    background-color: #f0f0f0; /* Light background for message bubbles */
+    float: left; /* Aligns message to the left */
+    clear: both; /* Prevents floating elements from affecting layout */
+    margin: 5px 0px; /* Vertical margin for spacing between messages */
+    border-radius: 10px; /* Rounded corners for message bubbles */
+    max-width: 70%; /* Maximum width of message bubbles */
+    overflow-wrap: break-word; /* Wraps long words to the next line */
+    padding: 8px; /* Padding inside message bubbles */
+    font-size: 18px; /* Font size for readability */
+}
+
+/* Utility class to clear floats */
+.clearfix::after {
+    content: ""; /* Required content for pseudo-elements */
+    clear: both; /* Clears the float */
+    display: table; /* Changes the display to table for clearing floats */
+}
+
+/* Default style for message input on large screens */
+#messageInput {
+    border-radius: 15px; /* Rounded corners for input field */
+    height: 50px; /* Fixed height of input field */
+    width: 50%; /* Adjust this value as needed */
+    display: block; /* Ensures input behaves as a block element */
+    margin-left: auto; /* Automatic left margin for centering */
+    margin-right: auto; /* Automatic right margin for centering */
+}
+
+/* Media queries for smaller screens */
+
+/* Styles for screens with a maximum width of 768px (e.g., tablets) */
+@media screen and (max-width: 768px) {
+    form {
+        max-width: 100%;           /* Form takes full width of its parent container */
+        padding: 10px;             /* Reduced padding inside the form */
+        font-size: 16px;           /* Slightly smaller font size for form content */
+    }
+
+    /* Adjusting font size for various input fields on smaller screens */
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        font-size: 18px;          /* Medium font size for better readability on tablets */
+    }
+
+    /* Adjusting font size for buttons on smaller screens */
+    button {
+        font-size: 14px;          /* Smaller font size for buttons */
+    }
+}
+
+/* Styles for screens with a maximum width of 480px (e.g., mobile phones) */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 20px;          /* Reducing the font size of main headings for mobile screens */
+    }
+
+    /* Further adjusting font size for input fields on mobile screens */
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        font-size: 16px;          /* Smaller font size for input fields to fit mobile screens */
+    }
+
+    /* Adjusting button padding and font size for smaller mobile screens */
+    button {
+        padding: 8px 15px;        /* Smaller padding for buttons to fit better */
+        font-size: 12px;          /* Smaller font size for buttons on mobile devices */
+    }
+}
+
+/* Styling for displaying code snippets */
+code {
+    display: block; /* Code appears in a separate block */
+    background-color: black; /* Black background for code block */
+    color: white; /* White text for contrast */
+    padding: 10px; /* Internal spacing for readability */
+    margin: 10px 0; /* Space above and below the code block */
+    overflow-x: auto; /* Adds horizontal scrolling for long lines of code */
+    white-space: pre-wrap; /* Preserves whitespace and line breaks */
+    word-wrap: break-word; /* Allows long words to break and wrap */
+    border-radius: 10px; /* Rounded corners for the code block */
+
