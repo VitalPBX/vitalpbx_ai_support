@@ -22,7 +22,8 @@ OpenAI Account (https://platform.openai.com/apps).
 ## Install Database
 <pre>
   wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_ai_support/main/vpbx_agentai.sql
-  mysql -u root < vpbx_agentai.sqlackup.sql
+  mysql -u root -e  "CREATE DATABASE vpbx_agentai;"
+  mysql -u root vpbx_agentai < vpbx_agentai.sql
 </pre>
 
 Create User
