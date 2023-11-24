@@ -21,7 +21,7 @@ OpenAI Account (https://platform.openai.com/apps).
 
 ## Install Database
 <pre>
-  wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_agent_ai_chatgpt/main/vpbx_agentai.sql
+  wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_ai_support/main/vpbx_agentai.sql
   mysql -u root < vpbx_agentai.sqlackup.sql
 </pre>
 
