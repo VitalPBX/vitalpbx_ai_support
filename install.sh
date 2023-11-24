@@ -16,6 +16,7 @@ echo -e "************************************************************"
 mkdir /usr/share/vpbx_ai_support/
 mkdir /usr/share/vpbx_ai_support/docs
 mkdir /usr/share/vpbx_ai_support/data
+mkdir /var/www/vpbx_ai_support
 mkdir /var/www/vpbx_ai_support/html
 mkdir /var/www/vpbx_ai_support/html/css
 mkdir /var/www/vpbx_ai_support/html/js
