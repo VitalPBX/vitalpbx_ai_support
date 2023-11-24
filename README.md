@@ -37,7 +37,7 @@ Create User
 ## Install from script
 Download the script
 <pre>
-  wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_agent_ai_chatgpt/main/install.sh
+  wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_ai_support/main/install.sh
 </pre>
 
 Give execution permissions
