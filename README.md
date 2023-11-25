@@ -50,7 +50,7 @@ Run the script
   ./install.sh
 </pre>
 
-## Edit .env and database.php
+## Edit .env, database.php,vpbxaisupport.py and embededded-docs.py
 Now we are going to edit the .env file to add the Openai API Key and the paths to the documents and the ChromaDB database.
 <pre>
   cd /usr/share/vpbx_ai_support/
@@ -61,6 +61,12 @@ Later we are going to edit the database.php file to configure the access credent
 <pre>
   cd /var/www/vpbx_ai_support/html/
   nano dtabase.php
+</pre>
+
+In vpbxaisupport.py change the route of valid certificate
+<pre>
+    ssl_cert = "/usr/share/PathToCertificate/bundle.pem"
+    ssl_key = "/usr/share/PathToCertificate/private.pem"
 </pre>
 
 ## Embedding Document
