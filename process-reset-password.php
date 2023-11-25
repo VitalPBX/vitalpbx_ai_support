@@ -1,3 +1,4 @@
+<?php
 // Retrieve the reset token sent via POST request.
 $token = $_POST["token"];
 
@@ -69,4 +70,7 @@ $stmt->bind_param("ss", $password_hash, $user["id"]);
 $stmt->execute();
 
 // Notify the user that the password has been updated.
-echo "Password updated. You can now login.";
+// Redirect to the agentai page.
+header("Location: login.php");
+exit;
+?>
