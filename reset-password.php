@@ -48,6 +48,12 @@ if (strtotime($user["reset_token_expires_at"]) <= time()) {
 </head>
 <body>
 
+    <div class="chat-header">
+        <div class="header-left"></div>
+        <div class="header-title">VitalPBX Agent AI</div>
+        <div class="header-right"></div>
+    </div>
+
     <h1>Reset Password</h1> <!-- Page Heading -->
 
     <!-- Form for submitting new password -->
