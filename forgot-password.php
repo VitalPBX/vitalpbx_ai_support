@@ -7,14 +7,14 @@
     <!-- Character Encoding Declaration -->
     <link rel="stylesheet" href="./css/style.css">
     <style>
-        /* Aquí puedes agregar estilos CSS adicionales o incluirlos en tu archivo CSS externo */
+        /* AquÃ­ puedes agregar estilos CSS adicionales o incluirlos en tu archivo CSS externo */
     </style>
 </head>
 <body>
 
     <div class="chat-header">
         <div class="header-left">
-            <a href="index.php">Home</a> <!-- Enlace a la página principal -->
+            <a href="index.php">Home</a> <!-- Enlace a la pÃ¡gina principal -->
         </div>
         <div class="header-title">VitalPBX Agent AI</div>
         <div class="header-right">
@@ -29,19 +29,19 @@
         </div>
     </div>
 
-    <h1>Forgot Password</h1> <!-- Título de la página -->
+    <h1>Forgot Password</h1> <!-- TÃ­tulo de la pÃ¡gina -->
 
-    <!-- Formulario para solicitar el restablecimiento de contraseña -->
+    <!-- Formulario para solicitar el restablecimiento de contraseÃ±a -->
     <form method="post" action="send-password-reset.php">
         <!-- Campo de entrada para el email -->
         <label for="email">email</label>
         <input type="email" name="email" id="email">
 
-        <!-- Botón de envío -->
+        <!-- BotÃ³n de envÃ­o -->
         <button>Send</button>
     </form>
 
-    <!-- Pie de página con información adicional -->
+    <!-- Pie de pÃ¡gina con informaciÃ³n adicional -->
     <div class="chat-footer">
         VitalPBX Agent AI (Powered by ChatGPT) can make mistakes. Consider checking important information.
     </div>
