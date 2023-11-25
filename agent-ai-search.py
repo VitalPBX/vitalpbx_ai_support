@@ -30,7 +30,7 @@ if SSL == "yes":
     ssl_context.load_cert_chain(ssl_cert, keyfile=ssl_key)
 
 # Load environment variables from a .env file
-load_dotenv("/var/lib/asterisk/agi-bin/.env")
+load_dotenv('/usr/share/vpbx_ai_support/.env')
 OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
 OPENAI_ASSISTANT_ID = os.environ.get('OPENAI_ASSISTANT_ID')
 OPENAI_INSTRUCTIONS = os.environ.get('OPENAI_INSTRUCTIONS')
