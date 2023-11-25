@@ -29,26 +29,37 @@ $stmt->execute();
 // Check if the update was successful.
 if ($mysqli->affected_rows) {
 
-    // Include the mailer configuration file.
-    $mail = require __DIR__ . "/mailer.php";
-
-    // Configure the email settings.
-    $mail->setFrom("noreply@example.com");
-    $mail->addAddress($email);
-    $mail->Subject = "Password Reset";
-    $mail->Body = <<<END
-    Click <a href="http://example.com/reset-password.php?token=$token">here</a> 
+    $to = $email;
+    $subject = 'Password Reset';
+    $message = <<<END
+    Click <a href="yourwebsite.com/reset-password.php?token=$token">here</a> 
     to reset your password.
     END;
 
-    // Attempt to send the email.
-    try {
-        $mail->send();
-    } catch (Exception $e) {
-        // Output an error message if the email fails to send.
-        echo "Message could not be sent. Mailer error: {$mail->ErrorInfo}";
-    }
+    $headers = 'From: tu-direccion@example.com';
+
+    mail($to, $subject, $message, $headers);
 }
 
-// Notify the user that the message has been sent.
-echo "Message sent, please check your inbox.";
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div class="chat-header">
+        <div class="header-left"></div>
+        <div class="header-title">VitalPBX Agent AI</div>
+        <div class="header-right"></div>
+    </div>
+ 
+    <h1>Message sent, please check your inbox.</h1>
+
+</body>
+</html>
