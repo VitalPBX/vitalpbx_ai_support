@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 import openai
 from openai import OpenAI
 
-load_dotenv("/PATH_TO_.env_FILE/.env")
+load_dotenv('/usr/share/vpbx_ai_support/.env')
 PATH_TO_DOCUMENTS = os.environ.get('PATH_TO_DOCUMENTS')
 OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
 
