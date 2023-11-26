@@ -29,6 +29,7 @@ wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_ai_support/main/embedde
 wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_ai_support/main/vpbxaisupport.py -P /usr/share/vpbx_ai_support/
 wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_ai_support/main/.env  -P /usr/share/vpbx_ai_support/
 
+wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_ai_support/main/robots.txt  -P /var/www/vpbx_ai_support/html/
 wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_ai_support/main/agentai.php  -P /var/www/vpbx_ai_support/html/
 wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_ai_support/main/database.php  -P /var/www/vpbx_ai_support/html/
 wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_ai_support/main/forgot-password.php  -P /var/www/vpbx_ai_support/html/
