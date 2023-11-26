@@ -1,7 +1,13 @@
 # VitalPBX - AI Support with ChatGPT
 
 ## Necessary Resources
-OpenAI Account (https://platform.openai.com/apps).
+OpenAI Account (https://platform.openai.com/apps).<br>
+Postfix for sending emails<br>
+Python, for ChatGPT query service<br>
+PHP 8<br>
+Chroma database<br>
+MariaDB 10<br>
+Apache<br>
 
 ## Installing dependencies
 <pre>
@@ -17,6 +23,14 @@ OpenAI Account (https://platform.openai.com/apps).
 
 <pre>
   pip install -r requirements.txt
+</pre>
+
+## Email configuration
+This example is made to work with Postfix, so we recommend you configure it correctly before proceeding.
+
+Install Postfix
+<pre>
+  sudo apt install postfix
 </pre>
 
 ## Install Database
@@ -77,6 +91,9 @@ To transfer our documents to the ChromaDB database we must do the following:<br>
   cd /usr/share/vpbx_ai_support/
   ./embedded-docs.py
 </pre>
+
+## Create apache configuration file
+Remember to create the Apache configuration file to access the web site
 
 ### Note
 Remember to unblock port 3002 or the one you decided to use in the VitalPBx firewall as in any other firewall that VitalPBX has in front of you.<br>
