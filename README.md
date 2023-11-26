@@ -93,7 +93,9 @@ To transfer our documents to the ChromaDB database we must do the following:<br>
 </pre>
 
 ## Create apache configuration file
-Remember to create the Apache configuration file to access the web site
+Remember to create the Apache configuration file to access the web site (/etc/apache2/sites-available).<br>
+We can see an example of the configuration in the following file:<br>
+mysite.com.conf
 
 ### Note
 Remember to unblock port 3002 or the one you decided to use in the VitalPBx firewall as in any other firewall that VitalPBX has in front of you.<br>
