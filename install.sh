@@ -21,7 +21,6 @@ mkdir /var/www/vpbx_ai_support/html
 mkdir /var/www/vpbx_ai_support/html/css
 mkdir /var/www/vpbx_ai_support/html/js
 
-
 # Download required files from GitHub
 wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_ai_support/main/agent-ai-create-py -P /usr/share/vpbx_ai_support/
 wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_ai_support/main/agent-ai-search.py -P /usr/share/vpbx_ai_support/
