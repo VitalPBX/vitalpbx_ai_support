@@ -1,7 +1,7 @@
 <?php
-
 // A flag to track invalid login attempts.
 $is_invalid = false;
+$not_confirmed = false; // Flag for unconfirmed accounts
 
 // Check if the form was submitted (POST request).
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -18,20 +18,26 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Fetch the user data from the result.
     $user = $result->fetch_assoc();
     
-    // Check if user exists and if the password is correct.
+    // Check if user exists.
     if ($user) {
-        if (password_verify($_POST["password"], $user["password_hash"])) {
-            
-            // Start a new session and regenerate the session ID for security.
-            session_start();
-            session_regenerate_id();
-            
-            // Store the user's ID in the session.
-            $_SESSION["user_id"] = $user["id"];
-            
-            // Redirect to the agentai page.
-            header("Location: agentai.php");
-            exit;
+        // Check if the account is confirmed.
+        if ($user['is_confirmed'] == 0) {
+            $not_confirmed = true;
+        } else {
+            // Check if the password is correct.
+            if (password_verify($_POST["password"], $user["password_hash"])) {
+                
+                // Start a new session and regenerate the session ID for security.
+                session_start();
+                session_regenerate_id();
+                
+                // Store the user's ID in the session.
+                $_SESSION["user_id"] = $user["id"];
+                
+                // Redirect to the agentai page.
+                header("Location: agentai.php");
+                exit;
+            }
         }
     }
     
@@ -60,13 +66,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
     <!-- Display an error message if the login is invalid -->
     <?php if ($is_invalid): ?>
-        <em>Invalid login</em>
+        <h1>Invalid login</h1>
+    <?php endif; ?>
+
+    <!-- Display a message if the account is not confirmed -->
+    <?php if ($not_confirmed): ?>
+        <h1>Your account has not been confirmed. Please check your email.</h1>
     <?php endif; ?>
     
     <!-- Login form -->
     <form method="post">
         <!-- Email input field -->
-        <label for="email">email</label>
+        <label for="email">Email</label>
         <input type="email" name="email" id="email"
                value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
         
