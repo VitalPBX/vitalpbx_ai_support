@@ -26,7 +26,7 @@ if SSL == "yes":
     ssl_context.load_cert_chain(ssl_cert, keyfile=ssl_key)
 
 # Load environment variables from a .env file
-load_dotenv('/usr/share/vpbx_ai_support/.env')
+load_dotenv('./.env')
 
 # Get the path to the database from environment variables
 PATH_TO_DATABASE = os.environ.get('PATH_TO_DATABASE')
