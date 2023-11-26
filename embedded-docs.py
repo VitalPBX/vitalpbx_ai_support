@@ -12,7 +12,7 @@ from langchain.text_splitter import CharacterTextSplitter
 
 # Load environment variables from a .env file located at the specified path.
 # This allows for secure and centralized configuration management.
-load_dotenv("/usr/share/vpbx_ai_support/.env")
+load_dotenv("./.env")
 
 # Retrieve paths and API keys from environment variables for further use.
 # PATH_TO_DOCUMENTS: Directory containing documents to be processed.
