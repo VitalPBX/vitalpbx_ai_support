@@ -31,12 +31,29 @@ if ($mysqli->affected_rows) {
 
     $to = $email;
     $subject = 'Password Reset';
+
+    // Start the message with a greeting and use HTML for formatting
     $message = <<<END
-    Click <a href="yourwebsite.com/reset-password.php?token=$token">here</a> 
-    to reset your password.
+    <html>
+    <head>
+      <title>Password Reset</title>
+    </head>
+    <body>
+      <p>Dear Customer,</p>
+      <p>You have requested to reset your password. Please click on the link below to proceed:</p>
+      <p><a href="https://ai.vitalpbx.cloud/reset-password.php?token=$token">Reset Password</a></p>
+      <p>If you did not request a password reset, please ignore this message.</p>
+      <p>Regards,<br>Your VitalPBX Agent AI Support</p>
+    </body>
+    </html>
     END;
 
-    $headers = 'From: tu-direccion@example.com';
+    // Add headers for HTML format
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+    // Additional From header
+    $headers .= 'From: noreplay@vitalpbx.com' . "\r\n";
 
     mail($to, $subject, $message, $headers);
 }
